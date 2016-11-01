@@ -2,7 +2,6 @@
 import Ember from "ember";
 import Promise from "liquid-fire/promise";
 import Velocity from "velocity";
-var capitalize = Ember.String.capitalize;
 
 export default Ember.Mixin.create({
   growDuration: 250,
@@ -37,7 +36,7 @@ export default Ember.Mixin.create({
       return Promise.resolve();
     }
     var target = {};
-    target['outer'+capitalize(dimension)] = [
+    target[dimension] = [
       want[dimension],
       have[dimension],
     ];
